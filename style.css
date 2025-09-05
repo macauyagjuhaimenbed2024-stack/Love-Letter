@@ -1,0 +1,86 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+}
+.intro-page {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.intro-page button {
+  background: white;
+  color: black;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+.intro-page button:hover { transform: scale(1.1); }
+.letter-page {
+  background: linear-gradient(135deg, #ff4d6d, #ff99ac);
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+}
+.paper {
+  width: 80%;
+  max-width: 700px;
+  background: #f5deb3;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: all 1s ease;
+}
+.paper.folded { height: 150px; overflow: hidden; cursor: pointer; }
+.paper.unfolded { height: auto; cursor: default; }
+.hidden { display: none; }
+.dear {
+  font-family: 'Dancing Script', cursive;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #4b2e2e;
+}
+.poem {
+  font-size: 18px;
+  line-height: 1.8;
+  white-space: pre-line;
+  color: #3a1c1c;
+  margin-bottom: 20px;
+}
+.continue-btn {
+  background: linear-gradient(45deg, #ff4d6d, #ff99ac);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+  from { box-shadow: 0 0 5px #ff4d6d; }
+  to { box-shadow: 0 0 20px #ff99ac; }
+}
+.final-line {
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 40px;
+  background: linear-gradient(45deg, #ff4d6d, #ff99ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
